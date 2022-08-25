@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    cout << "Hello world!" << "\n" << endl;
+    cout << "I'm using C++ from this day!";
+
+    //This is going to be comments now!
+    /*This is also going to be comment by chance!*/
+
+    int x = 5;
+    cout << x << endl;
+    double y = 5.5;
+    cout << y << endl;
+    char c = 'a';
+    cout << c << endl;
+    string  s = "Sagar hasan";
+    cout << s << endl;
+    bool b = true;
+    cout << b << endl;
+
+    // adding variable to another
+    double sum = x + y;
+    cout << sum;
+
+    int x1 = 5, y1 = 6, z1 = 8;
+    cout << x1+y1+z1 << endl;
+
+    string str;
+    cout << "Enter your Name here: ";
+    cin >> str;
+    cout << "Your Name is " << str;
+
+    return 0;
+}
