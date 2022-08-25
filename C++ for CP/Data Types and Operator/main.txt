@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int myNum = 5; // 2 or 4 bytes
+    float myFloatNum = 5.55; // 4 bytes
+    double myDoubleNum = 6.66; // 8 bytes
+    char myChar = 'a'; // 1 bytes
+    bool myBool = true; // 1 bytes
+    string myStr = "Sagar hasan";
+
+    float num1 = 23e3;
+    double num2 = 23E3;
+    cout << num1 << endl << num2 << endl;
+
+    char a = 65, b = 66, c = 67;
+    cout << a << endl;
+    cout << b << endl;
+    cout << c << endl;
+
+    cout << myStr << endl;
+
+    // Operators
+    int sum = 5 + 5;
+    int sum1 = sum + 5;
+    int sum2 = sum2 + sum;
+    cout << sum2;
+
+    // rest kind of same don't have to dive in
+    
+    return 0;
+}
