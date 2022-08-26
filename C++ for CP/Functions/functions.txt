@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+
+void myFunction(){
+    cout << "This is a Function call" << endl;
+}
+
+string myString(string s){
+    return s;
+}
+int main(){
+    myFunction();
+    cout << myString("I just got executed!") << endl;
+    return 0;
+}

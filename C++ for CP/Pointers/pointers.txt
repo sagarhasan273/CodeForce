@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    string food = "Pizza";
+    string &meal = food;
+
+    meal = "Burger";
+    cout << food << endl;
+    cout << meal << endl;
+
+    //  Pointers 
+
+    string *ptr;
+    ptr = &food;
+    cout << ptr << endl;
+    cout << *ptr << endl;
+
+    cout << endl << "Modifiers" << endl;
+
+    cout << food << endl;
+    cout << &food << endl;
+    cout << *ptr << endl;
+    *ptr = "Hamburger";
+    cout << ptr << endl;
+    cout << food << endl;
+
+}
