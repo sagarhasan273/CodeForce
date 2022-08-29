@@ -1,0 +1,18 @@
+#include <iostream>
+#include <set>
+#include <iterator>
+#define endl " "
+
+using namespace std;
+
+int main(){
+    set<int> demoSet;
+    demoSet.insert(5);
+    demoSet.insert(8);
+    demoSet.insert(4);
+    demoSet.insert(15);
+    demoSet.insert(1);
+
+    for(auto & i: demoSet) cout << i << endl;
+    return 0;
+}
