@@ -1,0 +1,18 @@
+bool sagarhasan273(vector<int> &a, vector<int> &b){
+	if (a[0] != b[0]){
+            return a[0]>b[0];
+    	}return a[1]<b[1];
+}
+    
+
+sort(properties.begin(), properties.end(), sagarhasan273);
+
+
+Other Way:
+
+
+sort(p.begin(), p.end(), [](const vector<int>& x, const vector<int>& y) {
+	return x[0] == y[0] ? x[1] < y[1] : x[0] > y[0];
+});
+
+

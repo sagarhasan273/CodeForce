@@ -1,0 +1,1 @@
+properties = sorted(properties, key=lambda row: (-row[0], row[1]))
