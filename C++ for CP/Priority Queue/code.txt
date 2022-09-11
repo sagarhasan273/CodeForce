@@ -1,0 +1,8 @@
+priority_queue<int> pq; // C++ creates a max-heap for priority queue.
+priority_queue<int, vector<int>, greater<int>> pq; // C++ creates a min-heap for priority queue.
+
+pq.size();
+pq.push(value);
+pq.top();
+pq.pop();
+pq.empty();
