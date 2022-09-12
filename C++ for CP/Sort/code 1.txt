@@ -1,0 +1,5 @@
+
+# [(0,30),(5,10),(15,20)] this type list sort in C++ like this
+
+sort(intervals.begin(), intervals.end(), [](const Interval &i1, const Interval &i2){return i1.start < i2.start;});
+
