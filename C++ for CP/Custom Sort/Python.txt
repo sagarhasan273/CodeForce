@@ -1,1 +1,6 @@
 properties = sorted(properties, key=lambda row: (-row[0], row[1]))
+
+
+indices = sorted(range(len(plantTime)), key=lambda x: -growTime[x]) 
+        indices = list(range(len(plantTime)))
+        indices.sort(key=lambda x: -growTime[x]);
