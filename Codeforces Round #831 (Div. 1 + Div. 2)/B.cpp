@@ -3,7 +3,7 @@
 using namespace std;
 
 void solve(){
-    int n, a, b, sa=0, mx=0; cin >> n;
+    long long n, a, b, sa=0, mx=0; cin >> n;
     while(n--){
         cin >> a >> b;
         sa += min(a, b);
