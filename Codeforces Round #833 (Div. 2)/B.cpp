@@ -1,24 +1,23 @@
 #include <bits/stdc++.h>
-#include <math.h>
 
 using namespace std;
-#define ll long long
 
-void solve()
+typedef long long ll;
+
+void tasecase()
 {
-    ll n, ans = 0; string s;
-    cin >> n >> s;
+    int n, count = 0; string nums;
+    cin >> n >> nums;
 
-    for (int i = 0; i < s.size(); i++){
-        ll f[10]{}, distinct = 0, max_freq = 0;
-
-        for (int j = i; j < s.size() && (++f[s[j]-'0']) <= 10; j++){
-            max_freq = max(max_freq, f[s[j]-'0']);
-            if (f[s[j]-'0'] == 1) distinct++;
-            if (max_freq <= distinct) ans++;
+    for (int i = 0; i < n; i++){
+        int f[10]{}, distinct = 0, maxfr = 0;
+        for (int j = i; j < n && (++f[nums[j]-'0']) <= 10; j++){
+            maxfr = max(f[nums[j] - '0'], maxfr);
+            if(f[nums[j] - '0'] == 1) distinct++;
+            if (maxfr <= distinct) count++;
         }
     }
-    cout << ans << endl;
+    cout << count << endl;
 }
 
 int main()
@@ -26,5 +25,5 @@ int main()
     int t;
     cin >> t;
     while (t--)
-        solve();
+        tasecase();
 }

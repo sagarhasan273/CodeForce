@@ -9,29 +9,27 @@ ll a[MaxN];
 map<ll, ll> freq;
 
 void solve(){
-    ll n; cin >> n;
-    bool found_wildcard = 0;
-
-    ll currentSum = 0, maxfr = 0, ans = 0;
+    ll n, maxfr = 0, currentSum = 0, ans = 0; cin >> n;
     freq.clear();
+    int found_wildcard = 0;
 
-    for (ll i = 0; i < n; i++){
+    for (int i = 0; i < n; i++){
         cin >> a[i];
+
         if (a[i] == 0){
             if (found_wildcard) ans += maxfr;
-            else ans += freq[0];
+            else ans = freq[0];
 
             found_wildcard = 1;
             maxfr = 0; freq.clear();
         }
-
         currentSum += a[i];
         maxfr = max(maxfr, ++freq[currentSum]);
     }
 
     if (found_wildcard) ans += maxfr;
     else ans += freq[0];
-
+    
     cout << ans << endl;
 }
 
