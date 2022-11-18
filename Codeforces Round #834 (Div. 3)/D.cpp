@@ -16,32 +16,23 @@ using namespace std;
 // ---------------------Start Code Here---------------------
 
 void testcase(){
-    int n, s, sum = 0, mx = 0, flag = 0; cin >> n >> s;
-    vector<int> vec(n);
-    for (auto &i: vec) {
-        cin >> i;
-        sum += i;
-        mx = max(mx, i);
-    }
-    sum += s;
-    s = 0;
-    int i = 1;
-    for (; i <= mx; i++){
-        s += i;
+    int n, m, mx = -1, ans = 0; 
+    cin >> n >> m;
+    int mid = m/2;
+    while (m > mid){
+        int num = m * n, cnt = 0; int prev_num = num;
+        while (num && num % 10 == 0){
+            cnt++;
+            num /= 10;
+        }
+        if (mx < cnt){
+            mx = cnt;
+            ans = prev_num;
+        }
+        m--;
     }
 
-    while (s < sum){
-        s += i;
-        i++;
-    }
-    
-    if (s == sum) flag = 1;
-
-    if (flag){
-        print("YES")
-    }else{
-        print("NO")
-    }
+    print(ans);
 }
 
 signed main(){
