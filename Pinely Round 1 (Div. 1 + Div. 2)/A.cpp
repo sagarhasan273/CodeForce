@@ -16,7 +16,16 @@ using namespace std;
 // ---------------------Start Code Here---------------------
 
 void testcase(){
-    
+    int n, a, b;
+    cin >> n >> a >> b;
+
+    if (n == 1) print("Yes")
+    else if (a == b && a == n) print("Yes")
+    else if (n-2 < (a+b)){
+        print("No")
+    }else{
+        print("Yes")
+    }
 }
 
 signed main(){
