@@ -16,7 +16,20 @@ using namespace std;
 // ---------------------Start Code Here---------------------
 
 void testcase(){
-    
+    int n, a; cin >> n;
+    set<int> set;
+
+    f(i, 0, n){
+        cin >> a;
+        set.insert(a);
+    }
+
+    if (set.size() <= 2){
+        print(n/2 + 1)
+    }
+    else{
+        print(n)
+    }
 }
 
 signed main(){
