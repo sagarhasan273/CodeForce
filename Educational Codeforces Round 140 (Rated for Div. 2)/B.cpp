@@ -3,41 +3,42 @@
 using namespace std;
 
 #define int                      long long
+
 #define f(i, a, n)               for (int i = a; i < n; i++)
+
 #define arrayinput(a, n)         f(i, 0, n) cin >> a[i]
 #define arrayprint(a, n)         f(i, 0, n) {cout << a[i] << ' ';} cout << endl
-#define arraysort(a, n)          sort(a, a+n)
+#define arraysort(a, n)          sort(a+1, a+n)
+
 #define all(a)                   a.begin(), a.end()
 #define print(a)                 {cout << a << endl; return;}
-#define end                      cout << endl;
 
 #define vectorinput(v)           for(auto &i : v) cin >> i
 #define vectorprint(v)           for(auto x: v) {cout << x << ' ';} cout << endl
 #define pb                       push_back
 
 
-
-
 // ---------------------Start Code Here---------------------
 
 void testcase(){
-    int n; cin >> n;
-    string s="";
+    int n;
+    cin >> n;
+    int arr[n];
+    arrayinput(arr, n);
+    arraysort(arr, n);
 
-    while (n){
-        if (n%2 == 1){
-            s.append("A");
-            n = (n-1)/2;
-        }else{
-            s.append("B");
-            n = (n-2)/2;
+    for (int i = 1; i < n; i++) {
+        while (arr[0] < arr[i]){
+            arr[0]++; arr[i]--;
         }
     }
-    
-    for(int i = s.size()-1; i >= 0; i--) cout << s[i];
-    end;
+
+    print(arr[0])
 }
 
 signed main(){
-    testcase();
+    int t; cin >> t; while (t--)
+    {
+        testcase();
+    }
 }
