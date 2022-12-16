@@ -28,11 +28,9 @@ void testcase(){
         for(int i = 0; i < n; i++) cout << 1 << ' ';
         cout << endl;
     }else{
-        arr.pb(1);
-        arr.pb(n-1);
-        arr.pb(n/2);
-        arr.pb(n/2);
-        for (int i = 0; i < n-4; i++) arr.pb(n);
+        arr.pb(2);
+        arr.pb(6);
+        for (int i = 0; i < n-2; i++) arr.pb(4);
 
         vectorprint(arr);
     }
