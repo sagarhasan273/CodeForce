@@ -21,7 +21,31 @@ using namespace std;
 // ---------------------Start Code Here---------------------
 
 void testcase(){
-    
+    int n; cin >> n;
+    string s = ""; cin >> s;
+
+    int ans = -1, l = 0, r = 0;
+    for (int i = 0; i < n; i++){
+        if (s[i] == 'L') l++;
+        if (s[i] == 'R') r++;
+    }
+    for (int i = 1; i < n; i++){
+        if (s[i] == 'L' and s[i-1] == 'R'){
+            print(0); return;
+        }
+        if (s[i-1] == 'L' and s[i] == 'R'){
+            ans = i;
+            break;
+        }else{
+            ans = 0;
+        }
+    }
+
+    if (l == n or r == n){
+        print(-1)
+    }else{
+        print(ans)
+    }
 }
 
 signed main(){
