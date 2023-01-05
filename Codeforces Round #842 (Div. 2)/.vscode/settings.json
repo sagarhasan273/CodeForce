@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.php": "php",
+        "unordered_map": "cpp"
+    }
+}
