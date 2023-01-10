@@ -11,7 +11,7 @@ using namespace std;
 #define arraysort(a, n)          sort(a, a+n)
 
 #define all(a)                   a.begin(), a.end()
-#define rall(a)                  a.rbegin(), a.end()
+#define rall(a)                  a.rbegin(), a.rend()
 #define print(a)                 {cout << a << endl; return;}
 
 #define vectorinput(v)           for(auto &i : v) cin >> i
