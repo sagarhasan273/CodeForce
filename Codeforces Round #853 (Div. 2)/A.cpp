@@ -2,21 +2,6 @@
 
 using namespace std;
 
-#define ll                      long long
-
-#define f(i, a, n)               for (int i = a; i < n; i++)
-
-#define arrayinput(a, n)         f(i, 0, n) cin >> a[i]
-#define arrayprint(a, n)         f(i, 0, n) {cout << a[i] << ' ';} cout << endl
-#define arraysort(a, n)          sort(a, a+n)
-
-#define all(a)                   a.begin(), a.end()
-#define rall(a)                  a.rbegin(), a.rend()
-#define print(a)                 {cout << a << endl; return;}
-
-#define vectorinput(v)           for(auto &i : v) cin >> i
-#define vectorprint(v)           for(auto x: v) {cout << x << ' ';} cout << endl
-
 
 //  ----------------------------------------------------------------------------------------------------------
 //  --------------------------------------[   Vector in C++ STL   ]-------------------------------------------
@@ -33,12 +18,11 @@ using namespace std;
         push_back()                vec.push_back()                                       – It push the elements into a vector from the back
         pop_back()                 vec.pop_back()                                        – It is used to pop or remove elements from a vector from the back.
         insert()                   vec.insert(vec.begin() + index, value);               – It inserts new elements before the element at the specified position
-        emplace()                  vec.emplace(vec.begin() + index, value);              – It extends the container by inserting new element at position
-        emplace_back()             vec.emplace_back(value)                               – It is used to insert a new element to the end of the vector
 
         erase()                    vec.erase(position);                                  – It is used to remove elements from a container from the specified position or range.
-        swap()                     vec1.swap(vec2);                                      – It is used to swap the contents of one vector with another vector of same type. Sizes may differ.
         clear()                    vec.clear();                                          – It is used to remove all the elements of the vector container
+
+        swap()                     vec1.swap(vec2);                                      – It is used to swap the contents of one vector with another vector of same type. Sizes may differ.
 */
 
 
@@ -56,12 +40,8 @@ using namespace std;
         push_back()                dque.push_back()                                       – It push the elements into a deque from the back
         pop_back()                 dque.pop_back()                                        – It is used to pop or remove elements from a deque from the back.
         insert()                   dque.insert(dque.begin() + index, value);              – It inserts new elements before the element at the specified position
-        emplace()                  dque.emplace(dque.begin() + index, value);             – It extends the container by inserting new element at position
-        emplace_front()            dque.emplace_front(value)                              – It is used to insert a new element to the beginning of the deque
-        emplace_back()             dque.emplace_back(value)                               – It is used to insert a new element to the end of the deque
 
         erase()                    dque.erase(dque.begin() + index);                      – It is used to remove elements from a container from the specified position or range.
-        swap()                     dque1.swap(dque2);                                     – It is used to swap the contents of one deque with another deque of same type and size.
         clear()                    dque.clear();                                          – It is used to remove all the elements of the deque container
 */
 
@@ -91,9 +71,6 @@ using namespace std;
         front()	                   que.front()                                            - Returns a reference to the first element of the queue.
         push()   	               que.push()                                             - Adds the element at the end of the queue.
         pop() 	                   que.pop()                                              - Deletes the first element of the queue.
-
-        swap()	                   que.swap()                                             - Exchange the contents of two queues but the queues must be of the same data type & differ.
-        emplace()	               que.emplace(value)                                     - Insert a new element into the queue container, the new element is added to the end of the queue.
 */
 
 
@@ -154,9 +131,8 @@ using namespace std;
         erase()                     uset.erase(range/single element)                        – Remove either a single element or a range of elements ranging from start(inclusive) to end(exclusive).
 
         insert()                    uset.insert()                                           – Insert a new {element} in the unordered_set container.
-        emplace()                   uset.emplace()                                          – Insert an element in an unordered_set container.
-        swap()                      uset1.swap(uset2)                                       – Exchange values of two unordered_set containers.
 */
+
 
 //  ---------------------------------------------------------------------------------------------------------
 //  --------------------------------------[   Map in C++ STL   ]---------------------------------------------
@@ -172,6 +148,7 @@ using namespace std;
 */
 
 
+//----------------------------------------------------------------------------------------------------------------------
 
 
 // *************                                                          ***
@@ -186,6 +163,23 @@ using namespace std;
 //  ***************                                                        *********
 // *************                                                          ***
 
+
+//----------------------------------------------------------------------------------------------------------------------
+
+#define ll                      long long
+
+#define f(i, a, n)               for (int i = a; i < n; i++)
+
+#define arrayinput(a, n)         f(i, 0, n) cin >> a[i]
+#define arrayprint(a, n)         f(i, 0, n) {cout << a[i] << ' ';} cout << endl
+#define arraysort(a, n)          sort(a, a+n)
+
+#define all(a)                   a.begin(), a.end()
+#define rall(a)                  a.rbegin(), a.rend()
+#define print(a)                 {cout << a << endl; return;}
+
+#define vectorinput(v)           for(auto &i : v) cin >> i
+#define vectorprint(v)           for(auto x: v) {cout << x << ' ';} cout << endl
 
 
 void testcase(){
