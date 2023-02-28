@@ -159,25 +159,34 @@ using namespace std;
 //  *************                                                           ****
 
 //----------------------------------------------------------------------------------------------------------------------
-#define ll                                      long long
+#define ll                      long long
 
-#define f(i, a, n)                              for (int i = a; i < n; i++)
+#define f(i, a, n)               for (int i = a; i < n; i++)
 
-#define arrayinput(a, n)                        f(i, 0, n) cin >> a[i]
-#define arrayprint(a, n)                        f(i, 0, n) {cout << a[i] << ' ';} cout << endl
-#define arraysort(a, n)                         sort(a, a+n)
+#define arrayinput(a, n)         f(i, 0, n) cin >> a[i]
+#define arrayprint(a, n)         f(i, 0, n) {cout << a[i] << ' ';} cout << endl
+#define arraysort(a, n)          sort(a, a+n)
 
-#define all(a)                                  a.begin(), a.end()
-#define rall(a)                                 a.rbegin(), a.rend()
-#define print(a)                                {cout << a << endl; return;}
+#define all(a)                   a.begin(), a.end()
+#define rall(a)                  a.rbegin(), a.rend()
+#define print(a)                 {cout << a << endl; return;}
 
-vector<ll> vectorInputLong(int n)               {vector<ll> vec; for(int i = 0; i < n; i++) {ll val; cin >> val; vec.push_back(val);} return vec;}
-vector<int> vectorInputInt(int n)               {vector<int> vec; for(int i = 0; i < n; i++) {int val; cin >> val; vec.push_back(val);} return vec;}
-#define vectorprint(v)                          for(auto x: v) {cout << x << ' ';} cout << endl;
+vector<ll> vectorInputLong(int n)    {vector<ll> vec; for(int i = 0; i < n; i++) {ll val; cin >> val; vec.push_back(val);} return vec;}
+vector<int> vectorInputInt(int n)    {vector<int> vec; for(int i = 0; i < n; i++) {int val; cin >> val; vec.push_back(val);} return vec;}
+#define vectorprint(v)           for(auto x: v) {cout << x << ' ';} cout << endl;
 
 
 void testcase(){
-    
+    int n, k;
+    cin >> n >> k;
+    int L = 0, R = 55;
+    while (n--) {
+      int l, r;
+      cin >> l >> r;
+      if (l <= k && k <= r)
+        L = max(L, l), R = min(R, r);
+    }
+    cout << (L == R ? "YES\n" : "NO\n");
 }
 
 int main(){

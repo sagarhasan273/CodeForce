@@ -177,6 +177,8 @@ vector<int> vectorInputInt(int n)               {vector<int> vec; for(int i = 0;
 
 
 void testcase(){
+    int n; cin >> n;
+    vector<ll> arr = vectorInputLong(n);
     
 }
 
